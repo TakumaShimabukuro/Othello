@@ -1,7 +1,7 @@
 (function(){
     //change the states of the piece
     var turn;
-    var computer = 1; //change to 1 for start with white, 2 for black and 3 for human versos human
+    var computer = 3; //change to 1 for start with white, 2 for black and 3 for human versos human
     var checkPiece = function(x, y, flip) {
         var ret = 0;
         for(var dx = -1; dx <= 1; dx ++){
@@ -57,7 +57,7 @@
 
         //show message who won
         turn = 3 - turn;
-        message += "pass<br>" + ((turn == 1)? "black":"White") + "´s move";
+        message += " pass<br>" + ((turn == 1)? "black":"White") + "´s move";
         for (x = 1; x <= 8; x ++){
             for (y = 1; y <= 8; y ++){
                 if(board[x][y] == 0 && checkPiece(x,y, false)){
