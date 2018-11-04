@@ -29,16 +29,17 @@
     //change turn
     var computerMove = function(){
         if(turn == computer){
-        for (x = 1; x <= 8; x ++){
-            for (y = 1; y <= 8; y ++){
-                if(board[x][y] == 0 && checkPiece(x, y, true)){
-                    turnChange();
-                    return;
+            for (x = 1; x <= 8; x ++){
+                for (y = 1; y <= 8; y ++){
+                    if(board[x][y] == 0 && checkPiece(x, y, true)){
+                        turnChange();
+                        return;
+                    }
                 }
             }
         }
-    }
     };
+    
     var turnChange = function(){
         var black = 0, white = 0;
         var x, y;
